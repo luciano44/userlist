@@ -1,0 +1,254 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: hsla(0, 0%, 0%, 0.7);
+    box-sizing: border-box;
+    font-size: 0.92rem;
+    margin: 0;
+}
+
+html{
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    background: #c8dcf1;
+    padding: 0px 0;
+}
+
+.logo img{
+    height: 75px;
+    filter: opacity(0.9)
+}
+
+.fetchWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    height: 75px;
+}
+
+.fetch{
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.inputBtn{
+    height: 30px;
+    width: inherit;
+    border: none;
+    margin-top: 5px;
+    background: cornflowerblue;
+    color: white;
+    cursor: pointer;
+}
+
+.inputNumber{
+    font-size: 1.2rem;
+    height: 30px;
+    width: 40px;
+    border: none;
+    margin: 0 8px;
+    box-shadow: 0 0 3px lightgray;
+}
+
+.inputNumber:focus{
+    outline: none;
+    box-shadow: 0 0 0 2px cornflowerblue;
+}
+
+.api{
+    text-align: center;
+    margin: 0 0 25px 0;
+    position: relative;
+    background:cornflowerblue;
+    color:white;
+    padding: 2px;
+}
+
+.api a{
+    color: rgb(240, 244, 255)
+}
+
+.users{
+    width: auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 25px auto;
+}
+
+.person{
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    background: hsl(0, 0%, 100%);
+    box-shadow: 0 0 15px rgba(211, 211, 211, 0.4);
+    border-radius: 3px;
+    height: 120px;
+    width: 400px;
+    min-width: 200px;
+    margin: 3px 3px;
+    /*valores a serem alterados no JS para animaçao*/
+    padding: 0 25px;
+    filter: opacity(0);
+    transform: scaleY(0.95); 
+}
+
+.person div{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.person:nth-last-child(1){
+    background:red;
+    margin-right: auto;
+}
+
+.fill{
+    height: 120px;
+    width: 400px;
+    margin: 3px;
+}
+
+.person img{
+    height: 100px;
+    width: 100px;
+    border-radius: 2px;
+    border: 1px solid rgba(211, 211, 211, 0.5);
+    cursor: pointer;
+}
+
+.info{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+    padding-left: 15px;
+}
+
+span:not(:nth-child(3)){
+    margin-left: 7px;
+    white-space: nowrap;
+}
+
+.info div{
+    margin-bottom: 5px;
+}
+
+.shadow{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: .3s;
+    /*animar items abaixo*/
+    background: rgba(0, 0, 0, 0);
+}
+
+.profile-wrapper{
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 50%;
+}
+
+.profile{
+    padding: 50px;
+    border-radius: 5px;
+    position: relative;
+    width: 400px;
+    height: auto;
+    left: -200px;
+    background: #fff;
+    transition-timing-function: cubic-bezier(.05,.95,.05,.95);
+    transition-duration: .3s;
+    /*animar items abaixo*/
+    top: 20%;
+    transform: scale(0.95);
+    filter: opacity(0);
+}
+
+i{
+    text-align: center;
+    min-width: 15px;
+}
+
+.profile div:nth-child(2){
+    margin-top: 25px;
+    height: auto;
+}
+
+.profile .info{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    /* background:red; */
+}
+
+.profile img{
+    margin: 0 auto;
+}
+
+.bottom-bar{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+    background: #c8dcf1;
+    border-bottom: red;
+    backdrop-filter: blur(5px);
+    
+}
+
+.medias{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 125px;
+    margin: 20px;
+}
+
+.medias a{
+    filter: contrast(1) saturate(0) brightness(0.3);
+    display: flex;
+    align-items: center;
+}
+
+.medias a:hover{
+    filter: contrast(0) saturate(0) brightness(.7);
+}
+
+.medias img{
+    height: 18px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: cornflowerblue;
+    border: 1px solid rgb(93, 137, 219);;
+    border-radius: 3px;
+}
+
+@media (max-width: 400px){
+    .logo img{
+        display: none;
+    }
+    header{
+        justify-content:center;
+    }
+}

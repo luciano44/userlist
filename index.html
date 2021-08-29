@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="https://i.pinimg.com/originals/82/04/bf/8204bf43eaec04006d1199116feb8852.png"
+          alt="Logo"/>
+        </div>
+      <div class="fetchWrapper">
+        <div class="fetch">
+          Buscar
+          <input class="inputNumber input" type="number" value="5" /> usuários.
+        </div>
+        <button class="inputBtn" onclick="btnHandler()">Buscar</button>
+      </div>
+    </header>
+    <div class="api">
+      API utilizada: <a href="https://randomuser.me/">randomuser.me</a>
+    </div>
+
+    <div class="users">
+      <div class="fill" aria-hidden="true"></div>
+      <div class="fill" aria-hidden="true"></div>
+      <div class="fill" aria-hidden="true"></div>
+    </div>
+
+    <div class="profilePopUp" hidden>
+      <div class="shadow" onclick="closeProfile()"></div>
+      <div class="profile-wrapper">
+        <div class="profile"></div>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <div class="portfolio-link">
+        Desenvolvido por
+        <a href="https://luciano44.github.io">Luciano Ribeiro</a>
+      </div>
+      <div class="medias">
+        <a href="https://www.linkedin.com/in/luciano-ar/"
+          ><img
+            src="https://image.flaticon.com/icons/png/512/174/174857.png"
+            alt="Linkedin"
+        /></a>
+        <a href="https://github.com/luciano44"
+          ><img
+            src="https://image.flaticon.com/icons/png/512/25/25231.png"
+            alt="GitHub"
+        /></a>
+        <a href="mailto:luciano.ar6@gmail.com"
+          ><img
+            src="https://seeklogo.com/images/M/mail-envelope-symbol-logo-4AB011B4E0-seeklogo.com.png"
+            alt="Email"
+        /></a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
