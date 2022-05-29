@@ -1,254 +1,262 @@
-*{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: hsla(0, 0%, 0%, 0.7);
-    box-sizing: border-box;
-    font-size: 0.92rem;
-    margin: 0;
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  font-size: 0.92rem;
+  margin: 0;
 }
 
-html{
-    min-height: 100vh;
+html {
+  min-height: 100vh;
 }
 
-header{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100px;
-    background: #c8dcf1;
-    padding: 0px 0;
+body {
+  background-color: rgba(0, 183, 255, 0.05);
 }
 
-.logo img{
-    height: 75px;
-    filter: opacity(0.9)
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+  background: hsla(197, 100%, 50%, 0.1);
+  color: #333;
+  padding: 0px 0;
 }
 
-.fetchWrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    height: 75px;
+.logo img {
+  height: 75px;
+  filter: opacity(0.75);
 }
 
-.fetch{
-    font-size: 1.2rem;
-    white-space: nowrap;
+.fetchWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  height: 75px;
 }
 
-.inputBtn{
-    height: 30px;
-    width: inherit;
-    border: none;
-    margin-top: 5px;
-    background: cornflowerblue;
-    color: white;
-    cursor: pointer;
+.fetch {
+  font-size: 1.2rem;
+  white-space: nowrap;
 }
 
-.inputNumber{
-    font-size: 1.2rem;
-    height: 30px;
-    width: 40px;
-    border: none;
-    margin: 0 8px;
-    box-shadow: 0 0 3px lightgray;
+.inputBtn {
+  height: 30px;
+  width: inherit;
+  border: none;
+  margin-top: 5px;
+  background: rgb(0, 183, 255);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
 }
 
-.inputNumber:focus{
-    outline: none;
-    box-shadow: 0 0 0 2px cornflowerblue;
+.inputNumber {
+  font-size: 1.2rem;
+  height: 30px;
+  width: 40px;
+  border: none;
+  margin: 0 8px;
+  box-shadow: 0 0 3px lightgray;
 }
 
-.api{
-    text-align: center;
-    margin: 0 0 25px 0;
-    position: relative;
-    background:cornflowerblue;
-    color:white;
-    padding: 2px;
+.inputNumber:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px gray;
 }
 
-.api a{
-    color: rgb(240, 244, 255)
+.api {
+  text-align: center;
+  margin: 0 0 25px 0;
+  position: relative;
+  background: rgb(0, 183, 255);
+  color: white;
+  padding: 2px;
 }
 
-.users{
-    width: auto;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 25px auto;
+.api a {
+  color: rgb(240, 244, 255);
 }
 
-.person{
-    display: flex;
-    flex-grow: 0;
-    flex-shrink: 1;
-    background: hsl(0, 0%, 100%);
-    box-shadow: 0 0 15px rgba(211, 211, 211, 0.4);
-    border-radius: 3px;
-    height: 120px;
-    width: 400px;
-    min-width: 200px;
-    margin: 3px 3px;
-    /*valores a serem alterados no JS para animaçao*/
-    padding: 0 25px;
-    filter: opacity(0);
-    transform: scaleY(0.95); 
+.users {
+  width: auto;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 25px auto;
 }
 
-.person div{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+.person {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 0 15px rgba(211, 211, 211, 0.4);
+  border-radius: 3px;
+  height: 120px;
+  width: 400px;
+  min-width: 200px;
+  margin: 3px 3px;
+  /*valores a serem alterados no JS para animaçao*/
+  padding: 0 25px;
+  filter: opacity(0);
+  transform: scaleY(0.95);
 }
 
-.person:nth-last-child(1){
-    background:red;
-    margin-right: auto;
+.person div {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.fill{
-    height: 120px;
-    width: 400px;
-    margin: 3px;
+.person:nth-last-child(1) {
+  background: red;
+  margin-right: auto;
 }
 
-.person img{
-    height: 100px;
-    width: 100px;
-    border-radius: 2px;
-    border: 1px solid rgba(211, 211, 211, 0.5);
-    cursor: pointer;
+.fill {
+  height: 120px;
+  width: 400px;
+  margin: 3px;
 }
 
-.info{
-    box-sizing: border-box;
-    width: 100%;
-    height: 100px;
-    padding-left: 15px;
+.person img {
+  height: 100px;
+  width: 100px;
+  border-radius: 2px;
+  border: 1px solid rgba(211, 211, 211, 0.5);
+  cursor: pointer;
 }
 
-span:not(:nth-child(3)){
-    margin-left: 7px;
-    white-space: nowrap;
+.info {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  padding-left: 15px;
 }
 
-.info div{
-    margin-bottom: 5px;
+span:not(:nth-child(3)) {
+  margin-left: 7px;
+  white-space: nowrap;
 }
 
-.shadow{
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    transition: .3s;
-    /*animar items abaixo*/
-    background: rgba(0, 0, 0, 0);
+.info div {
+  margin-bottom: 5px;
 }
 
-.profile-wrapper{
-    position: fixed;
-    height: 100%;
-    width: 0;
-    top: 0;
-    left: 50%;
+.shadow {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+  /*animar items abaixo*/
+  background: rgba(0, 0, 0, 0);
 }
 
-.profile{
-    padding: 50px;
-    border-radius: 5px;
-    position: relative;
-    width: 400px;
-    height: auto;
-    left: -200px;
-    background: #fff;
-    transition-timing-function: cubic-bezier(.05,.95,.05,.95);
-    transition-duration: .3s;
-    /*animar items abaixo*/
-    top: 20%;
-    transform: scale(0.95);
-    filter: opacity(0);
+.profile-wrapper {
+  position: fixed;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 50%;
 }
 
-i{
-    text-align: center;
-    min-width: 15px;
+.profile {
+  padding: 50px;
+  border-radius: 5px;
+  position: relative;
+  width: 400px;
+  height: auto;
+  left: -200px;
+  background: #fff;
+  transition-timing-function: cubic-bezier(0.05, 0.95, 0.05, 0.95);
+  transition-duration: 0.3s;
+  /*animar items abaixo*/
+  top: 20%;
+  transform: scale(0.95);
+  filter: opacity(0);
 }
 
-.profile div:nth-child(2){
-    margin-top: 25px;
-    height: auto;
+i {
+  text-align: center;
+  min-width: 15px;
 }
 
-.profile .info{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    padding: 0;
-    /* background:red; */
+.profile div:nth-child(2) {
+  margin-top: 25px;
+  height: auto;
 }
 
-.profile img{
-    margin: 0 auto;
+.profile .info {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding: 0;
 }
 
-.bottom-bar{
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 25px;
-    background: #c8dcf1;
-    border-bottom: red;
-    backdrop-filter: blur(5px);
-    
+.profile img {
+  margin: 0 auto;
 }
 
-.medias{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 125px;
-    margin: 20px;
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+  color: #fff;
+  background: hsla(197, 100%, 50%, 0.25);
+  border-bottom: red;
+  backdrop-filter: blur(10px);
+  text-shadow: 0 0 5px rgb(0, 46, 92);
 }
 
-.medias a{
-    filter: contrast(1) saturate(0) brightness(0.3);
-    display: flex;
-    align-items: center;
+.bottom-bar a {
+  color: #fff;
 }
 
-.medias a:hover{
-    filter: contrast(0) saturate(0) brightness(.7);
+.medias {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 125px;
+  margin: 20px;
 }
 
-.medias img{
-    height: 18px;
+.medias a {
+  display: flex;
+  align-items: center;
+}
+
+.medias a:hover {
+  filter: contrast(0) saturate(0) brightness(0.7);
+}
+
+.medias svg {
+  filter: drop-shadow(0 0 5px rgb(0, 46, 92));
+  font-size: 20px;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: cornflowerblue;
-    border: 1px solid rgb(93, 137, 219);;
-    border-radius: 3px;
+  background: rgba(0, 183, 255);
+  border: 1px solid rgb(0, 183, 255);
 }
 
-@media (max-width: 400px){
-    .logo img{
-        display: none;
-    }
-    header{
-        justify-content:center;
-    }
+@media (max-width: 400px) {
+  .logo img {
+    display: none;
+  }
+  header {
+    justify-content: center;
+  }
 }
