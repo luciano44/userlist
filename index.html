@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Listagem de Usuários</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://luciano44.netlify.app/static/media/users.d9f4482596b382ba758d0ee3d08181c0.svg"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -18,21 +23,18 @@
     <header>
       <div class="logo">
         <img
-          src="https://i.pinimg.com/originals/82/04/bf/8204bf43eaec04006d1199116feb8852.png"
+          src="https://luciano44.netlify.app/static/media/users.d9f4482596b382ba758d0ee3d08181c0.svg"
           alt="Logo"
         />
       </div>
       <div class="fetchWrapper">
         <div class="fetch">
           Buscar
-          <input class="inputNumber input" type="number" value="5" /> usuários.
+          <input class="inputNumber input" type="number" value="5" />usuários.
         </div>
         <button class="inputBtn" onclick="btnHandler()">Buscar</button>
       </div>
     </header>
-    <div class="api">
-      API utilizada: <a href="https://randomuser.me/">randomuser.me</a>
-    </div>
 
     <div class="users">
       <div class="fill" aria-hidden="true"></div>
@@ -47,6 +49,9 @@
       </div>
     </div>
 
+    <div class="api">
+      API utilizada: <a href="https://randomuser.me/">randomuser.me</a>
+    </div>
     <div class="bottom-bar">
       <div class="portfolio-link">
         Desenvolvido por
